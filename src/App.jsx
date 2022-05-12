@@ -4,7 +4,7 @@ function App(){
     return (
         <Container maxWidth="md">
 
-            <h1>QUIZ APP</h1>
+            <h1>REACT QUIZ APP</h1>
             <Home/>
             </Container>
     )

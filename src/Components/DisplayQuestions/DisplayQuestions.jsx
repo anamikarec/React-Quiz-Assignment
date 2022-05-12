@@ -23,13 +23,11 @@ const useStyles = makeStyles({
   },
   question:{
     color:'black',
-    fontSize: '2rem',
+    fontSize: '1.5rem',
   },
 
   progressRoot: {
     height: 10,
-    // backgroundColor: lighten('#ff6c5c', 0.5),
-    backgroundColor:"gray",
     borderRadius: 20,
 
   },
@@ -108,7 +106,7 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
         <Card className={classes.root}>
           <CardActionArea>  
             <CardContent>
-              <Typography variant="h5" component="h3">
+              <Typography variant="h5" component="h4">
                 Question {questionNo} of {total}
               </Typography>
               <Typography gutterBottom variant="body2" color="textSecondary" component="p">
@@ -116,7 +114,7 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
               </Typography>
               { difficultyLevelChecker()}
               <Divider/>
-              <Typography  variant="body1" color="textSecondary" component="p" className={classes.question}>
+              <Typography  variant="body2" color="textSecondary" component="p" className={classes.question}>
                 {decodeURIComponent(question['question'])}
               </Typography>
             </CardContent>
@@ -162,7 +160,7 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
         </div>
 
 
-        <div className={classes.progressRoot}>
+        <div className={classes.progressRoot} id="progress">
           <BorderLinearProgress
               className={classes.bar}
               variant="determinate"
